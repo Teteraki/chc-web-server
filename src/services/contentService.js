@@ -1,10 +1,3 @@
-function serve(req, res) {
-    const route = req.path;
-    console.log("Route requested: ", route);
-    
-    res.send(serveContent(route));
-}
-
 function serveContent(route) {
     let file;
 
@@ -28,4 +21,4 @@ function serveContent(route) {
     // const filePath = path.join(__dirname. "")
 }
 
-module.exports = { serve };
+module.exports = { serveContent };

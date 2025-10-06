@@ -1,13 +1,10 @@
 require("dotenv").config();
 
-const express = require("express");
-const app = express();
+const app = require("express")();
 
-const publicRouter = require("./src/public/public.routes");
-// const adminRouter = require("./src/admin/admin.routes")
+const appRouter = require("./src/routes/routes");
 
-app.use("/", publicRouter);
-// app.use("/admin", adminRouter);
+app.use("/", appRouter);
 
 const PORT = process.env.PORT || 3000;
 
